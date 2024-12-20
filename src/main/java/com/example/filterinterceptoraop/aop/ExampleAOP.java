@@ -1,5 +1,6 @@
 package com.example.filterinterceptoraop.aop;
 
+import com.example.filterinterceptoraop.exception.ExamAOPException;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -20,6 +21,7 @@ public class ExampleAOP {
         Object result = joinPoint.proceed();
 
         log.error("AOP end");
+//        throw new ExamAOPException();
         return result;
     }
 }

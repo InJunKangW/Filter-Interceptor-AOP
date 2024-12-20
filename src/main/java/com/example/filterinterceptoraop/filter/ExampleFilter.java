@@ -1,5 +1,6 @@
 package com.example.filterinterceptoraop.filter;
 
+import com.example.filterinterceptoraop.exception.ExamFilterException;
 import jakarta.servlet.*;
 import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class ExampleFilter implements Filter {
             Spring 기본으로 지니는 필터를 거치지 못하게 되니 전달을 못하게 된 상태로 응답이 머무르게 됨.
          */
         filterChain.doFilter(servletRequest, servletResponse);
+//        throw new ExamFilterException();
 
         log.error("ExampleFilter doFilter end");
     }
