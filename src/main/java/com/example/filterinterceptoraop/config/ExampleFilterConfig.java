@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ExampleFilterConfig {
-    //Filter 는 제외할 URL 은 지정하지 못한다.
+    //Filter 는 적용 제외할 URL 은 지정하지 못한다.
     @Bean
     public FilterRegistrationBean<Filter> filterRegistrationBean() {
         FilterRegistrationBean<Filter> filterRegistrationBean = new FilterRegistrationBean<>();

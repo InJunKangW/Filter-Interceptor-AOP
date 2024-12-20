@@ -14,6 +14,6 @@ public class ExampleController {
         log.error("controller called");
         model.addAttribute("message", "controller called");
         log.error("view made");
-        return "example";
+        return "exampleView";
     }
 }
